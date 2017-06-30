@@ -1,7 +1,4 @@
-## Re-use tuleap base for caching ##
 FROM centos:centos6
-
-MAINTAINER Manuel Vacelet, manuel.vacelet@enalean.com
 
 COPY Tuleap.repo /etc/yum.repos.d/
 
@@ -25,7 +22,7 @@ RUN yum -y install epel-release centos-release-scl && \
 	rh-php56-php-process \
 	rh-php56-php-pdo \
 	rh-php56-php-fpm \
-	rh-nginx18-nginx \
+	nginx \
 	java-1.8.0-openjdk && \
     yum remove -y tuleap \
         tuleap-core-subversion \
@@ -64,4 +61,4 @@ CMD /usr/share/tuleap/tests/rest/bin/run.sh
 
 ENV MYSQL_DAEMON=rh-mysql56-mysqld
 ENV FPM_DAEMON=rh-php56-php-fpm
-ENV HTTPD_DAEMON=rh-nginx18-nginx
+ENV HTTPD_DAEMON=nginx
