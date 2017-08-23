@@ -1,8 +1,6 @@
 ## Re-use tuleap base for caching ##
 FROM centos:centos6
 
-MAINTAINER Manuel Vacelet, manuel.vacelet@enalean.com
-
 COPY Tuleap.repo /etc/yum.repos.d/
 
 RUN yum -y install epel-release centos-release-scl && \
@@ -19,7 +17,7 @@ RUN yum -y install epel-release centos-release-scl && \
     tuleap-core-subversion \
     tuleap-core-subversion-modperl \
     tuleap-documentation && \
-    yum --disablerepo=Tuleap install -y git19-git \
+    yum --disablerepo=Tuleap install -y git19-git rh-git29-git \
     java-1.8.0-openjdk && \
     yum clean all
 
@@ -28,7 +26,7 @@ COPY libnss-mysql-root.cfg libnss-mysql.cfg /etc/
 RUN sed -i -e 's/^passwd\(.*\)/passwd\1 mysql/g' \
     	   -e 's/^shadow\(.*\)/shadow\1 mysql/g' \
 	   -e 's/^group\(.*\)/group\1 mysql/g'  /etc/nsswitch.conf && \
-    curl -k -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin && \ 
+    curl -k -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin && \
     touch /etc/aliases.codendi && \
     mkdir -p /etc/tuleap/conf \
     /etc/tuleap/plugins \
