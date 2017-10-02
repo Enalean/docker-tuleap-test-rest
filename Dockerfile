@@ -1,4 +1,3 @@
-## Re-use tuleap base for caching ##
 FROM centos:centos6
 
 COPY Tuleap.repo /etc/yum.repos.d/
@@ -16,7 +15,12 @@ RUN yum -y install epel-release centos-release-scl && \
     yum remove -y tuleap \
     tuleap-core-subversion \
     tuleap-core-subversion-modperl \
-    tuleap-documentation && \
+    tuleap-documentation \
+    rh-php70-php-cli \
+    rh-php70-php-pdo \
+    rh-php70-php-xml \
+    rh-php70-php-mysqlnd \
+    && \
     yum --disablerepo=Tuleap install -y git19-git rh-git29-git \
     java-1.8.0-openjdk && \
     yum clean all
