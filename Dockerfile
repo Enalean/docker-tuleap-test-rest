@@ -19,7 +19,8 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap-documentation \
     && \
     yum --disablerepo=Tuleap install -y \
-	rh-git29-git \
+    	git19-git \
+    	rh-git29-git \
         java-1.8.0-openjdk \
         rh-php70-php-cli \
         rh-php70-php-pdo \
