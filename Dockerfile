@@ -9,7 +9,7 @@ RUN yum -y install epel-release centos-release-scl && \
     php-pecl-xdebug \
     mysql-server \
     httpd \
-    php-restler-3.0-0.7.1 \
+    php-restler-3.0-0.7.3 \
     php-phpwiki-tuleap \
     libnss-mysql && \
     yum remove -y \
