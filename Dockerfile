@@ -11,6 +11,7 @@ RUN yum -y install epel-release centos-release-scl && \
     httpd \
     php-restler-3.0-0.7.1 \
     php-phpwiki-tuleap \
+    php-ZendFramework2-Mail \
     libnss-mysql && \
     yum remove -y \
         tuleap \
