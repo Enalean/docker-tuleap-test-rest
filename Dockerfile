@@ -15,13 +15,13 @@ RUN yum -y install epel-release centos-release-scl && \
     libnss-mysql && \
     yum remove -y \
         tuleap \
-	tuleap-core-subversion \
+        tuleap-core-subversion \
         tuleap-core-subversion-modperl \
         tuleap-documentation \
     && \
     yum --disablerepo=Tuleap install -y \
-    	git19-git \
-    	rh-git29-git \
+        git19-git \
+        rh-git29-git \
         java-1.8.0-openjdk \
         rh-php70-php-cli \
         rh-php70-php-pdo \
@@ -33,8 +33,8 @@ RUN yum -y install epel-release centos-release-scl && \
 COPY libnss-mysql-root.cfg libnss-mysql.cfg /etc/
 
 RUN sed -i -e 's/^passwd\(.*\)/passwd\1 mysql/g' \
-    	   -e 's/^shadow\(.*\)/shadow\1 mysql/g' \
-	   -e 's/^group\(.*\)/group\1 mysql/g'  /etc/nsswitch.conf && \
+           -e 's/^shadow\(.*\)/shadow\1 mysql/g' \
+           -e 's/^group\(.*\)/group\1 mysql/g'  /etc/nsswitch.conf && \
     curl -k -sS https://getcomposer.org/installer | /opt/rh/rh-php70/root/usr/bin/php && mv composer.phar /usr/local/bin && \
     touch /etc/aliases.codendi && \
     mkdir -p /etc/tuleap/conf \
