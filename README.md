@@ -1,6 +1,8 @@
 Docker image to execute Tuleap REST tests
 =========================================
 
+**This branch is deprecated, please look at: https://github.com/Enalean/docker-tuleap-test-rest/tree/c6-php56-httpd24-mysql56**
+
 How to use
 ==========
 
