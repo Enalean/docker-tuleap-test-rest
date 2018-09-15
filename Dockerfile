@@ -30,6 +30,7 @@ RUN yum -y install epel-release centos-release-scl && \
         php72-php-process \
         php72-php-pecl-zip \
         rh-git29-git \
+        sclo-git212-git \
         sudo \
     && \
     yum remove -y tuleap \
