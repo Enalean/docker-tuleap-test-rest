@@ -21,6 +21,7 @@ RUN yum -y install epel-release centos-release-scl && \
         php56-php-process \
         php56-php-pdo \
         php56-php-fpm \
+	php56-php-pecl-redis \
         java-1.8.0-openjdk \
         php72-php-cli \
         php72-php-pdo \
