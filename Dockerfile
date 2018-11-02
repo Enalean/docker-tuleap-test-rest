@@ -24,7 +24,7 @@ RUN yum -y install epel-release centos-release-scl && \
         php72-php-process \
         php72-php-sodium \
         php72-php-pecl-zip \
-	php72-php-redis \
+	php72-php-pecl-redis \
         java-1.8.0-openjdk \
         rh-git29-git \
         sclo-git212-git \
