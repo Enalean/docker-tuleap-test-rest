@@ -8,25 +8,24 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap-plugin-git-gitolite3 \
         rh-mysql57-mysql \
         rh-mysql57-mysql-server \
-        php72-php-gd \
-        php72-php-pecl \
-        php72-php-pear \
-        php72-php-soap \
-        php72-php-mysqlnd \
-        php72-php-xml \
-        php72-php-mbstring \
-        php72-php-opcache \
-        php72-php-fpm \
-        php72-php-cli \
-        php72-php-pdo \
-        php72-php-xml \
-        php72-php-mbstring \
-        php72-php-process \
-        php72-php-sodium \
-        php72-php-pecl-zip \
-	php72-php-pecl-redis \
+        php73-php-gd \
+        php73-php-pecl \
+        php73-php-pear \
+        php73-php-soap \
+        php73-php-mysqlnd \
+        php73-php-xml \
+        php73-php-mbstring \
+        php73-php-opcache \
+        php73-php-fpm \
+        php73-php-cli \
+        php73-php-pdo \
+        php73-php-xml \
+        php73-php-mbstring \
+        php73-php-process \
+        php73-php-sodium \
+        php73-php-pecl-zip \
+        php73-php-pecl-redis \
         java-1.8.0-openjdk \
-        rh-git29-git \
         sclo-git212-git \
         sudo \
     && \
@@ -37,8 +36,9 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap-documentation && \
     yum clean all
 
-RUN curl -k -sS https://getcomposer.org/installer | /opt/remi/php72/root/usr/bin/php && mv composer.phar /usr/local/bin && \
-    mkdir -p /etc/tuleap/conf \
+COPY --from=composer:1.8 /usr/bin/composer /usr/local/bin/composer
+
+RUN mkdir -p /etc/tuleap/conf \
         /etc/tuleap/plugins \
         /var/log/tuleap \
         /usr/lib/tuleap/bin \
@@ -51,5 +51,5 @@ COPY mysql-server.cnf /etc/opt/rh/rh-mysql57/my.cnf.d/mysql-server.cnf
 CMD /usr/share/tuleap/tests/rest/bin/run.sh
 
 ENV MYSQL_DAEMON=rh-mysql57-mysqld
-ENV FPM_DAEMON=php72-php-fpm
-ENV PHP_CLI=/opt/remi/php72/root/usr/bin/php
+ENV FPM_DAEMON=php73-php-fpm
+ENV PHP_CLI=/opt/remi/php73/root/usr/bin/php
