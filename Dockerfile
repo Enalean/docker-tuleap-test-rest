@@ -6,8 +6,6 @@ RUN yum -y install epel-release centos-release-scl && \
     yum -y install \
         tuleap \
         tuleap-plugin-git-gitolite3 \
-        rh-mysql57-mysql \
-        rh-mysql57-mysql-server \
         php73-php-gd \
         php73-php-pecl \
         php73-php-pear \
@@ -36,8 +34,6 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap-documentation && \
     yum clean all
 
-COPY --from=composer:1.8 /usr/bin/composer /usr/local/bin/composer
-
 RUN mkdir -p /etc/tuleap/conf \
         /etc/tuleap/plugins \
         /var/log/tuleap \
@@ -46,10 +42,7 @@ RUN mkdir -p /etc/tuleap/conf \
         /var/lib/tuleap/ftp/tuleap && \
     chown -R codendiadm:codendiadm /etc/tuleap /var/lib/tuleap/ftp /var/log/tuleap
 
-COPY mysql-server.cnf /etc/opt/rh/rh-mysql57/my.cnf.d/mysql-server.cnf
-
 CMD /usr/share/tuleap/tests/rest/bin/run.sh
 
-ENV MYSQL_DAEMON=rh-mysql57-mysqld
 ENV FPM_DAEMON=php73-php-fpm
 ENV PHP_CLI=/opt/remi/php73/root/usr/bin/php
