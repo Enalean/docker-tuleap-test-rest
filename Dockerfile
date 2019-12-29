@@ -1,11 +1,12 @@
-FROM centos:6
+FROM centos:7
 
 COPY *.repo /etc/yum.repos.d/
 
 RUN yum -y install epel-release centos-release-scl && \
     yum -y install \
         tuleap \
-        tuleap-plugin-git-gitolite3 \
+        tuleap-plugin-git \
+        mysql \
         php73-php-gd \
         php73-php-pecl \
         php73-php-pear \
@@ -27,11 +28,8 @@ RUN yum -y install epel-release centos-release-scl && \
         sclo-git212-git \
         sudo \
     && \
-    yum remove -y tuleap \
-        tuleap-plugin-git-gitolite3 \
-        tuleap-core-subversion \
-        tuleap-core-subversion-modperl \
-        tuleap-documentation && \
+    rm -rf /usr/share/tuleap/ && \
+    rm /usr/bin/tuleap-cfg /usr/bin/tuleap /usr/lib/tuleap/bin/fileforge && \
     yum clean all
 
 RUN mkdir -p /etc/tuleap/conf \
@@ -44,5 +42,5 @@ RUN mkdir -p /etc/tuleap/conf \
 
 CMD /usr/share/tuleap/tests/rest/bin/run.sh
 
-ENV FPM_DAEMON=php73-php-fpm
+ENV PHP_FPM=/opt/remi/php73/root/usr/sbin/php-fpm
 ENV PHP_CLI=/opt/remi/php73/root/usr/bin/php
