@@ -29,7 +29,7 @@ RUN yum -y install epel-release centos-release-scl && \
         sudo \
     && \
     rm -rf /usr/share/tuleap/ && \
-    rm /usr/bin/tuleap-cfg /usr/bin/tuleap /usr/lib/tuleap/bin/fileforge && \
+    rm /usr/bin/tuleap-cfg /usr/bin/tuleap && \
     yum clean all
 
 RUN mkdir -p /etc/tuleap/conf \
