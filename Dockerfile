@@ -7,23 +7,23 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap \
         tuleap-plugin-git \
         mysql \
-        php73-php-gd \
-        php73-php-pecl \
-        php73-php-pear \
-        php73-php-soap \
-        php73-php-mysqlnd \
-        php73-php-xml \
-        php73-php-mbstring \
-        php73-php-opcache \
-        php73-php-fpm \
-        php73-php-cli \
-        php73-php-pdo \
-        php73-php-xml \
-        php73-php-mbstring \
-        php73-php-process \
-        php73-php-sodium \
-        php73-php-pecl-zip \
-        php73-php-pecl-redis \
+        php74-php-gd \
+        php74-php-pecl \
+        php74-php-pear \
+        php74-php-soap \
+        php74-php-mysqlnd \
+        php74-php-xml \
+        php74-php-mbstring \
+        php74-php-opcache \
+        php74-php-fpm \
+        php74-php-cli \
+        php74-php-pdo \
+        php74-php-xml \
+        php74-php-mbstring \
+        php74-php-process \
+        php74-php-sodium \
+        php74-php-pecl-zip \
+        php74-php-pecl-redis \
         java-1.8.0-openjdk \
         sclo-git212-git \
         sudo \
@@ -42,5 +42,5 @@ RUN mkdir -p /etc/tuleap/conf \
 
 CMD /usr/share/tuleap/tests/rest/bin/run.sh
 
-ENV PHP_FPM=/opt/remi/php73/root/usr/sbin/php-fpm
-ENV PHP_CLI=/opt/remi/php73/root/usr/bin/php
+ENV PHP_FPM=/opt/remi/php74/root/usr/sbin/php-fpm
+ENV PHP_CLI=/opt/remi/php74/root/usr/bin/php
