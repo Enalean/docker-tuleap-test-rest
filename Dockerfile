@@ -6,6 +6,7 @@ RUN yum -y install epel-release centos-release-scl && \
     yum -y install \
         tuleap \
         tuleap-plugin-git \
+        sha1collisiondetector \
         mysql \
         php73-php-gd \
         php73-php-pecl \
