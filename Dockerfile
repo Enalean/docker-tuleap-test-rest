@@ -5,6 +5,7 @@ COPY *.repo /etc/yum.repos.d/
 RUN yum -y install epel-release centos-release-scl && \
     yum -y install \
         tuleap \
+        tuleap-core-cvs \
         tuleap-plugin-git \
         sha1collisiondetector \
         mysql \
