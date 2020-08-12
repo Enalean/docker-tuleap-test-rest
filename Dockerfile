@@ -25,7 +25,7 @@ RUN yum -y install epel-release centos-release-scl && \
         php74-php-process \
         php74-php-sodium \
         php74-php-pecl-zip \
-        php74-php-pecl-redis \
+        php74-php-pecl-redis5 \
         java-1.8.0-openjdk \
         sclo-git212-git \
         sudo \
