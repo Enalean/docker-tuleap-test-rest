@@ -40,7 +40,9 @@ RUN mkdir -p /etc/tuleap/conf \
         /usr/lib/tuleap/bin \
         /var/lib/tuleap/ftp/incoming \
         /var/lib/tuleap/ftp/tuleap && \
-    chown -R codendiadm:codendiadm /etc/tuleap /var/lib/tuleap/ftp /var/log/tuleap
+        chown -R codendiadm:codendiadm /etc/tuleap /var/lib/tuleap/ftp /var/log/tuleap && \
+        echo "zend.assertions = 1" >> /etc/opt/remi/php74/php.ini && \
+        echo "assert.exception = 1" >> /etc/opt/remi/php74/php.ini
 
 CMD /usr/share/tuleap/tests/rest/bin/run.sh
 
