@@ -26,6 +26,7 @@ RUN yum -y install epel-release centos-release-scl && \
         php73-php-sodium \
         php73-php-pecl-zip \
         php73-php-pecl-redis5 \
+        php73-php-pecl-mailparse \
         java-1.8.0-openjdk \
         sclo-git212-git \
         sudo \
