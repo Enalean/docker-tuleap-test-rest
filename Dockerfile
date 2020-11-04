@@ -9,6 +9,24 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap-plugin-git \
         sha1collisiondetector \
         mysql \
+        php73-php-gd \
+        php73-php-pecl \
+        php73-php-pear \
+        php73-php-soap \
+        php73-php-mysqlnd \
+        php73-php-xml \
+        php73-php-mbstring \
+        php73-php-opcache \
+        php73-php-fpm \
+        php73-php-cli \
+        php73-php-pdo \
+        php73-php-xml \
+        php73-php-mbstring \
+        php73-php-process \
+        php73-php-sodium \
+        php73-php-pecl-zip \
+        php73-php-pecl-redis5 \
+        php73-php-pecl-mailparse \
         php74-php-gd \
         php74-php-pecl \
         php74-php-pear \
