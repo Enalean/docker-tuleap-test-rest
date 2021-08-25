@@ -9,6 +9,7 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap-plugin-git \
         sha1collisiondetector \
         mysql \
+        rh-mysql57-mysql \
         php74-php-gd \
         php74-php-pecl \
         php74-php-pear \
