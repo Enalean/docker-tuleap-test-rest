@@ -25,6 +25,7 @@ RUN yum -y install epel-release centos-release-scl && \
         php80-php-mbstring \
         php80-php-process \
         php80-php-sodium \
+        php80-php-ldap \
         php80-php-pecl-zip \
         php80-php-pecl-redis5 \
         php80-php-pecl-mailparse \
