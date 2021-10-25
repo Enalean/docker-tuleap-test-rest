@@ -10,24 +10,6 @@ RUN yum -y install epel-release centos-release-scl && \
         sha1collisiondetector \
         mysql \
         rh-mysql57-mysql \
-        php74-php-gd \
-        php74-php-pecl \
-        php74-php-pear \
-        php74-php-soap \
-        php74-php-mysqlnd \
-        php74-php-xml \
-        php74-php-mbstring \
-        php74-php-opcache \
-        php74-php-fpm \
-        php74-php-cli \
-        php74-php-pdo \
-        php74-php-xml \
-        php74-php-mbstring \
-        php74-php-process \
-        php74-php-sodium \
-        php74-php-pecl-zip \
-        php74-php-pecl-redis5 \
-        php74-php-pecl-mailparse \
         php80-php-gd \
         php80-php-pecl \
         php80-php-pear \
