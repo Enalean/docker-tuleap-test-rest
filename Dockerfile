@@ -30,7 +30,6 @@ RUN yum -y install epel-release centos-release-scl && \
         php80-php-pecl-redis5 \
         php80-php-pecl-mailparse \
         java-1.8.0-openjdk \
-        sclo-git212-git \
         sudo \
     && \
     rm -rf /usr/share/tuleap/ && \
