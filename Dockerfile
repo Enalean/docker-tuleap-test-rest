@@ -10,6 +10,7 @@ RUN yum -y install epel-release centos-release-scl && \
         sha1collisiondetector \
         mysql \
         rh-mysql57-mysql \
+        rh-mysql80-mysql \
         php80-php-gd \
         php80-php-pecl \
         php80-php-pear \
