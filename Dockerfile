@@ -5,12 +5,11 @@ COPY *.repo /etc/yum.repos.d/
 RUN yum -y install epel-release centos-release-scl && \
     yum -y install \
         tuleap \
-        tuleap-core-cvs \
+        tuleap-plugin-svn \
         tuleap-plugin-git \
         sha1collisiondetector \
         rh-mysql80-mysql \
         php80-php-gd \
-        php80-php-pecl \
         php80-php-soap \
         php80-php-mysqlnd \
         php80-php-xml \
@@ -28,7 +27,6 @@ RUN yum -y install epel-release centos-release-scl && \
         php80-php-pecl-redis5 \
         php80-php-pecl-mailparse \
         php81-php-gd \
-        php81-php-pecl \
         php81-php-soap \
         php81-php-mysqlnd \
         php81-php-xml \
