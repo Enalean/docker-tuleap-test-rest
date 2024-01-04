@@ -9,6 +9,21 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap-plugin-svn \
         sha1collisiondetector \
         rh-mysql80-mysql \
+        php81-php-gd \
+        php81-php-mysqlnd \
+        php81-php-xml \
+        php81-php-mbstring \
+        php81-php-opcache \
+        php81-php-cli \
+        php81-php-pdo \
+        php81-php-xml \
+        php81-php-mbstring \
+        php81-php-process \
+        php81-php-sodium \
+        php81-php-ldap \
+        php81-php-pecl-zip \
+        php81-php-pecl-redis5 \
+        php81-php-pecl-mailparse \
         php82-php-gd \
         php82-php-mysqlnd \
         php82-php-xml \
