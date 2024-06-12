@@ -3,7 +3,8 @@ FROM rockylinux:9
 ARG PHP_BASE
 ARG PHP_CURRENT
 
-RUN dnf -y install epel-release https://ci.tuleap.net/yum/tuleap/rhel/9/dev/x86_64/tuleap-community-release.rpm https://rpms.remirepo.net/enterprise/remi-release-9.rpm && \
+RUN dnf -y install epel-release rocky-release-security https://ci.tuleap.net/yum/tuleap/rhel/9/dev/x86_64/tuleap-community-release.rpm https://rpms.remirepo.net/enterprise/remi-release-9.rpm && \
+    dnf update -y && \
     dnf -y install \
         tuleap \
         tuleap-plugin-git \
