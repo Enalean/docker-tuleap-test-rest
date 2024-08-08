@@ -9,7 +9,6 @@ RUN dnf -y install epel-release rocky-release-security https://ci.tuleap.net/yum
         tuleap \
         tuleap-plugin-git \
         tuleap-plugin-svn \
-        sha1collisiondetector \
         ${PHP_CURRENT}-php-gd \
         ${PHP_CURRENT}-php-mysqlnd \
         ${PHP_CURRENT}-php-xml \
